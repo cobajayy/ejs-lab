@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>Full Menu</h1>
+
+    <h2>Mains</h2>
+    <% menu.forEach((item) => { %> <% if(item.category === 'mains') { %> <%
+    if(item.rating === 5){ %>
+    <h4>
+      <ul>
+        <%= item.name + "⭐" %>
+      </ul>
+    </h4>
+    <ul>
+      $ <%= item.price %>
+    </ul>
+    <ul>
+      Rating: <%= item.rating %>
+    </ul>
+    <ul>
+      <%= item.details %>
+    </ul>
+    <%} else { %>
+    <h4>
+      <ul>
+        <%= item.name %>
+      </ul>
+    </h4>
+    <ul>
+      $ <%= item.price %>
+    </ul>
+    <ul>
+      Rating: <%= item.rating %>
+    </ul>
+    <ul>
+      <%= item.details %>
+    </ul>
+    <% }; %> <% }; %> <% }); %>
+
+    <h2>Sides</h2>
+    <% menu.forEach((item) => { %> <% if(item.category === 'sides') { %> <%
+    if(item.rating === 5){ %>
+    <h4>
+      <ul>
+        <%= item.name + "⭐" %>
+      </ul>
+    </h4>
+    <ul>
+      $ <%= item.price %>
+    </ul>
+    <ul>
+      Rating: <%= item.rating %>
+    </ul>
+    <ul>
+      <%= item.details %>
+    </ul>
+    <%} else { %>
+    <h4>
+      <ul>
+        <%= item.name %>
+      </ul>
+    </h4>
+    <ul>
+      $ <%= item.price %>
+    </ul>
+    <ul>
+      Rating: <%= item.rating %>
+    </ul>
+    <ul>
+      <%= item.details %>
+    </ul>
+    <% }; %> <% }; %> <% }); %>
+
+    <h2>Desserts</h2>
+    <% menu.forEach((item) => { %> <% if(item.category === 'desserts') { %> <%
+    if(item.rating === 5){ %>
+    <h4>
+      <ul>
+        <%= item.name + "⭐" %>
+      </ul>
+    </h4>
+    <ul>
+      $ <%= item.price %>
+    </ul>
+    <ul>
+      Rating: <%= item.rating %>
+    </ul>
+    <ul>
+      <%= item.details %>
+    </ul>
+    <%} else { %>
+    <h4>
+      <ul>
+        <%= item.name %>
+      </ul>
+    </h4>
+    <ul>
+      $ <%= item.price %>
+    </ul>
+    <ul>
+      Rating: <%= item.rating %>
+    </ul>
+    <ul>
+      <%= item.details %>
+    </ul>
+    <% }; %> <% }; %> <% }); %>
+    <h4>⭐ : Fan Favorites</h4>
+  </body>
+</html>
